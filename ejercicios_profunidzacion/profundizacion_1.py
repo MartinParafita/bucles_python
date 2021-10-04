@@ -25,7 +25,26 @@ sino que va hasta el anterior.
 '''
 
 print('Comenzamos a ponernos serios!')
+
 # Empezar aquí la resolución del ejercicio
+
+inicio = int(input("Ingrese aqui el primer numero: "))
+fin = int(input("Ingrese el segundo numero: "))
+cantidad_numeros = 0
+sumatoria = 0
+for i in range(inicio,fin):
+    if i >= 0:
+        cantidad_numeros += 1
+    else:
+        cantidad_numeros += 1
+    sumatoria += i
+print("La cantidad de numeros son: ",cantidad_numeros + 1)
+sumatoria = sumatoria + fin
+print("La sumatoria de los numeros es: ",sumatoria)
+promedio = sumatoria / cantidad_numeros
+print("El promedio de los numeros ingresados es: ",promedio)
+
+
 
 # inicio = ....
 # fin = ....

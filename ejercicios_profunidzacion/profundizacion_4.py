@@ -49,7 +49,31 @@ temperatura_sumatoria = 0   # Aquí debe ir almacenando la suma de todas las tem
 temperatura_promedio = 0    # Al finalizar el loop deberá aquí alamcenar el promedio
 temperatura_len = 0         # Aquí debe almacenar cuantas temperatuas hay en la lista
 
+for x in temp_dataloger:
+    if (temperatura_max is None) or x > temperatura_max:
+        temperatura_max = x
+
+    elif (temperatura_min is None) or (temperatura_min > x):
+        temperatura_min = x
+
+    temperatura_sumatoria += x
+    temperatura_len += 1
+print("La sumatoria es: ",round(temperatura_sumatoria,2))
+
+print("La cantidad de temperaturas es: ",temperatura_len)
+
+print("La temperatura maxima es: ",temperatura_max)
+
+print("La temperatura minima es: ",temperatura_min)
+
+temperatura_promedio = temperatura_sumatoria / temperatura_len
+
+print("El promedio de las temperaturas es: ",round(temperatura_promedio,2))
 # Colocar el bucle aqui......
+
+print("Utilizando la funcion 'max' el maximo es: ",max(temp_dataloger))
+print("Utilizando la funcion 'min' el minimo es: ",min(temp_dataloger))
+
 
 # Al finalizar el bucle compare si el valor que usted calculó para
 # temperatura_max y temperatura_min coincide con el que podría calcular
@@ -59,6 +83,7 @@ temperatura_len = 0         # Aquí debe almacenar cuantas temperatuas hay en la
 
 # Al finalizar el bucle debe calcular el promedio como:
 # temperatura_promedio = temperatura_sumatoria / cantidad_temperatuas
+print("La sumatoria usando la funcion 'sum' es: ",sum(temp_dataloger))
 
 # Corroboren los resultados de temperatura_sumatoria
 # usando la función "sum"
@@ -78,6 +103,14 @@ primavera -->   min = 10, max = 24
 Referencia:
 https://es.weatherspark.com/y/28981/Clima-promedio-en-Buenos-Aires-Argentina-durante-todo-el-a%C3%B1o
 '''
+if (temperatura_min >= 19) and (temperatura_max <= 28):
+    print("Las mediciones corresponden al verano.")
+elif (temperatura_min >= 11) and (temperatura_max <= 20):
+    print("Las mediciones corresponden al otoño.")
+elif (temperatura_min >= 8) and (temperatura_max <= 14):
+    print("Las mediciones corresponden al invierno.")
+elif (temperatura_min >= 10) and (temperatura_max <= 24):
+    print("Las mediciones corresponden a la primavera.")
 
 # En base a los rangos de temperatura de cada estación,
 # ¿En qué época del año nos encontramos?

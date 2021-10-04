@@ -33,5 +33,34 @@ Se debe debe imprimir un cartel de error si el operador ingresado no es
 alguno de lo soportados o no es la palabra "FIN".
 '''
 
+
 print("Mi Calculadora (^_^)")
 # Empezar aquí la resolución del ejercicio
+
+primer_numero = int(input("Ingrese el primer numero a calcular: "))
+segundo_numero = int(input("Ingrese el segundo numero a calcular: "))
+print("Presione:")
+print("         + Suma")
+print("         - Resta")
+print("         * Multiplicación")
+print("         / Division")
+print("         ** Exponente/Potencia")
+print("         'FIN' Para cerrar la calculadora.")
+operacion = str(input("Que operación que se desea ejecutar? "))
+while True:
+
+    if operacion == "+":
+        print("El resultado de la suma es: ", primer_numero + segundo_numero)
+    elif operacion == "-":
+        print("El resultado de la resta es: ", primer_numero - segundo_numero)
+    elif operacion == "*":
+        print("El resultado de la multiplicación es: ", primer_numero * segundo_numero)
+    elif operacion == "/":
+        print("El resultado de la división es: ", primer_numero / segundo_numero)
+    elif operacion == "**":
+        print("El resultado de la potencia es: ", primer_numero ** segundo_numero)
+    elif operacion == "FIN" or "fin":
+        print("Cerrando calculadora")
+    else:
+        print("Operación no válida")
+    break
